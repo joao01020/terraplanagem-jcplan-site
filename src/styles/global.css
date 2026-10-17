@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+
+:root {
+  font-family: 'DM Sans', Arial, sans-serif;
+  color-scheme: light;
+  --page: #f2efe8;
+  --ink: #222320;
+  --outline: #cbc5b9;
+  --hover: rgba(30,30,27,.06);
+  --active: #faf8f2;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --page: #181817;
+  --ink: #eeeae1;
+  --outline: #605e58;
+  --hover: rgba(255,255,255,.07);
+  --active: #383733;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--page); }
+body { margin: 0; min-height: 100vh; background: var(--page); color: var(--ink); transition: background-color .25s ease, color .25s ease; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+.site-header { width: 100%; }
+.header-inner { width: 100%; max-width: 1440px; min-height: 88px; padding: 24px clamp(24px, 5vw, 72px); display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-inline: auto; }
+.header-links { display: flex; align-items: center; gap: 30px; }
+.header-links a { font-size: 13px; font-weight: 400; line-height: 1; transition: opacity .2s; }
+.header-links a:hover { opacity: .55; }
+.theme-switch { display: inline-flex; align-items: center; gap: 2px; border: 1px solid var(--outline); border-radius: 999px; padding: 3px; height: 37px; }
+.theme-button { cursor: pointer; border: 1px solid transparent; background: transparent; color: var(--ink); width: 31px; height: 29px; display: grid; place-items: center; border-radius: 50%; opacity: .57; transition: background .2s, border-color .2s, opacity .2s; }
+.theme-button svg { width: 18px; height: 18px; }
+.theme-button:hover { opacity: 1; background: var(--hover); }
+.theme-button[aria-pressed='true'] { opacity: 1; border-color: var(--outline); background: var(--active); }
+:where(a, button):focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.page-content { min-height: calc(100vh - 88px); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 480px) {
+  .header-inner { min-height: 76px; padding-inline: 20px; gap: 24px; }
+  .header-links { gap: 19px; }
+  .header-links a { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+
+/* Identidade JCPLAN à esquerda e navegação à direita. */
+.brand { flex: 0 0 auto; font-size: 22px; font-weight: 600; letter-spacing: -.075em; line-height: 1; white-space: nowrap; }
+.brand-dot { color: #c99554; }
+.header-actions { display: flex; align-items: center; gap: 30px; margin-left: auto; }
+@media (max-width: 480px) {
+  .brand { font-size: 20px; }
+  .header-actions { gap: 16px; }
+  .header-links { gap: 15px; }
+}
+@media (max-width: 370px) {
+  .header-inner { padding-inline: 14px; gap: 10px; }
+  .brand { font-size: 18px; }
+  .header-actions { gap: 10px; }
+  .header-links { gap: 10px; }
+  .theme-button { width: 27px; height: 27px; }
+}

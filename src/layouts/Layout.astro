@@ -1,23 +1,30 @@
+---
+import '../styles/global.css';
+const { title = 'Terraplanagem e Demolição' } = Astro.props;
+---
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2efe8" />
+    <meta name="description" content="Terraplanagem e demolição. Conheça nossos serviços e entre em contato." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <script is:inline>
+      (() => {
+        try {
+          const saved = localStorage.getItem('site-theme');
+          const theme = saved === 'dark' || saved === 'light'
+            ? saved
+            : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.dataset.theme = theme;
+          document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#181817' : '#f2efe8');
+        } catch (_) { /* Continua com o tema padrão caso o armazenamento esteja indisponível. */ }
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
