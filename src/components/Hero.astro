@@ -1,0 +1,306 @@
+---
+---
+
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">— SERVIÇOS PARA CONSTRUÇÃO CIVIL</p>
+      <h1 class="hero-title">Terraplanagem &amp; Demolição.</h1>
+      <p class="hero-description">
+        Serviços de preparação de terrenos e demolição para obras de diferentes necessidades.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contato" class="hero-primary">Solicitar orçamento ↗</a>
+        <a href="#servicos" class="hero-secondary">Ver serviços ↓</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="construction-scene">
+        <img
+          src="/images/caminhao-basculante.svg"
+          alt=""
+          class="scene-item scene-truck"
+          loading="eager"
+          decoding="async"
+        />
+
+        <div class="scene-spill" aria-hidden="true">
+          <span class="spill-particle particle-1"></span>
+          <span class="spill-particle particle-2"></span>
+          <span class="spill-particle particle-3"></span>
+          <span class="spill-particle particle-4"></span>
+          <span class="spill-particle particle-5"></span>
+          <span class="spill-particle particle-6"></span>
+          <span class="spill-particle particle-7"></span>
+          <span class="spill-particle particle-8"></span>
+        </div>
+
+        <img
+          src="/images/entulho.png"
+          alt=""
+          class="scene-item scene-rubble"
+          loading="eager"
+          decoding="async"
+        />
+
+        <img
+          src="/images/escavadeira-jcplan.svg"
+          alt=""
+          class="scene-item scene-excavator"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 4.5rem 0 5rem;
+    min-height: calc(100vh - 110px);
+  }
+
+  .hero-inner {
+    width: min(1280px, calc(100% - 48px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 620px) minmax(340px, 1fr);
+    align-items: start;
+    gap: 2.5rem;
+  }
+
+  .hero-copy {
+    padding-top: 2.5rem;
+    max-width: 760px;
+  }
+
+  .hero-eyebrow {
+    margin: 0 0 1.35rem;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #7c756d;
+  }
+
+  .hero-title {
+    margin: 0;
+    font-size: clamp(2.7rem, 5vw, 4.2rem);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+    color: #2b2926;
+  }
+
+  .hero-description {
+    margin: 1.65rem 0 0;
+    max-width: 760px;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #6f685f;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 1.3rem;
+    border-radius: 6px;
+    background: #2b2926;
+    color: #f5f1ea;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .hero-secondary {
+    color: #6f685f;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 430px;
+    padding-top: 1rem;
+  }
+
+  .construction-scene {
+    position: relative;
+    width: min(620px, 100%);
+    height: 360px;
+  }
+
+  .scene-item {
+    position: absolute;
+    display: block;
+    height: auto;
+    user-select: none;
+    -webkit-user-drag: none;
+    object-fit: contain;
+    pointer-events: none;
+  }
+
+  .scene-truck {
+    left: 10px;
+    bottom: 28px;
+    width: 190px;
+    z-index: 3;
+  }
+
+  .scene-rubble {
+    left: 182px;
+    bottom: -2px;
+    width: 112px;
+    z-index: 2;
+  }
+
+  .scene-excavator {
+    right: 8px;
+    bottom: 26px;
+    width: 252px;
+    z-index: 1;
+    transform: scale(0.88);
+    transform-origin: bottom right;
+  }
+
+  /* CORRIGIDO: movido bem mais para a esquerda, saindo da ponta da caçamba */
+  .scene-spill {
+    position: absolute;
+    left: 167px;
+    bottom: 10px;
+    width: 92px;
+    height: 72px;
+    pointer-events: none;
+    z-index: 4;
+  }
+
+  .spill-particle {
+    position: absolute;
+    border-radius: 999px;
+    background: rgba(183, 122, 45, 0.42);
+    box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    filter: blur(0.45px);
+  }
+
+  .particle-1 { left: 0; top: 10px; width: 3px; height: 3px; animation: dust-fall-1 1.14s linear infinite; }
+  .particle-2 { left: 5px; top: 16px; width: 3px; height: 3px; animation: dust-fall-2 1.02s linear infinite 0.08s; }
+  .particle-3 { left: 10px; top: 8px; width: 2px; height: 2px; animation: dust-fall-3 1.08s linear infinite 0.16s; }
+  .particle-4 { left: 3px; top: 21px; width: 4px; height: 4px; animation: dust-fall-4 1.1s linear infinite 0.22s; }
+  .particle-5 { left: 14px; top: 14px; width: 3px; height: 3px; animation: dust-fall-5 1.16s linear infinite 0.32s; }
+  .particle-6 { left: 1px; top: 26px; width: 2px; height: 2px; animation: dust-fall-6 1.05s linear infinite 0.12s; }
+  .particle-7 { left: 9px; top: 24px; width: 3px; height: 3px; animation: dust-fall-7 1.12s linear infinite 0.4s; }
+  .particle-8 { left: 16px; top: 19px; width: 2px; height: 2px; animation: dust-fall-8 1.1s linear infinite 0.28s; }
+
+  @keyframes dust-fall-1 {
+    0% { transform: translate(0, 0) scale(0.72); opacity: 0; }
+    20% { opacity: 0.42; }
+    100% { transform: translate(34px, 30px) scale(1); opacity: 0; }
+  }
+  @keyframes dust-fall-2 {
+    0% { transform: translate(0, 0) scale(0.72); opacity: 0; }
+    20% { opacity: 0.38; }
+    100% { transform: translate(36px, 30px) scale(0.95); opacity: 0; }
+  }
+  @keyframes dust-fall-3 {
+    0% { transform: translate(0, 0) scale(0.7); opacity: 0; }
+    18% { opacity: 0.34; }
+    100% { transform: translate(38px, 32px) scale(1); opacity: 0; }
+  }
+  @keyframes dust-fall-4 {
+    0% { transform: translate(0, 0) scale(0.68); opacity: 0; }
+    22% { opacity: 0.4; }
+    100% { transform: translate(32px, 26px) scale(1); opacity: 0; }
+  }
+  @keyframes dust-fall-5 {
+    0% { transform: translate(0, 0) scale(0.7); opacity: 0; }
+    20% { opacity: 0.44; }
+    100% { transform: translate(34px, 28px) scale(1); opacity: 0; }
+  }
+  @keyframes dust-fall-6 {
+    0% { transform: translate(0, 0) scale(0.66); opacity: 0; }
+    18% { opacity: 0.3; }
+    100% { transform: translate(40px, 30px) scale(0.92); opacity: 0; }
+  }
+  @keyframes dust-fall-7 {
+    0% { transform: translate(0, 0) scale(0.72); opacity: 0; }
+    18% { opacity: 0.37; }
+    100% { transform: translate(30px, 24px) scale(1); opacity: 0; }
+  }
+  @keyframes dust-fall-8 {
+    0% { transform: translate(0, 0) scale(0.6); opacity: 0; }
+    20% { opacity: 0.28; }
+    100% { transform: translate(28px, 24px) scale(0.92); opacity: 0; }
+  }
+
+  :global(html.dark) .hero-title,
+  :global(html[data-theme='dark']) .hero-title,
+  :global(body[data-theme='dark']) .hero-title {
+    color: #f1ece4;
+  }
+
+  :global(html.dark) .hero-description,
+  :global(html[data-theme='dark']) .hero-description,
+  :global(body[data-theme='dark']) .hero-description {
+    color: #a79b8e;
+  }
+
+  :global(html.dark) .hero-eyebrow,
+  :global(html[data-theme='dark']) .hero-eyebrow,
+  :global(body[data-theme='dark']) .hero-eyebrow {
+    color: #8d8378;
+  }
+
+  :global(html.dark) .hero-primary,
+  :global(html[data-theme='dark']) .hero-primary,
+  :global(body[data-theme='dark']) .hero-primary {
+    background: #f1ece4;
+    color: #171411;
+  }
+
+  :global(html.dark) .hero-secondary,
+  :global(html[data-theme='dark']) .hero-secondary,
+  :global(body[data-theme='dark']) .hero-secondary {
+    color: #b79c7a;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .spill-particle { animation: none !important; }
+  }
+
+  @media (max-width: 1100px) {
+    .construction-scene { width: min(540px, 100%); height: 320px; }
+    .scene-truck { width: 170px; left: 6px; bottom: 24px; }
+    .scene-rubble { left: 154px; width: 102px; bottom: -4px; }
+    .scene-excavator { width: 226px; right: 6px; bottom: 22px; }
+    .scene-spill { left: 149px; bottom: 8px; width: 76px; height: 60px; }
+  }
+
+  @media (max-width: 980px) {
+    .hero { padding-top: 3rem; }
+    .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-copy { padding-top: 0; max-width: 100%; }
+    .hero-visual { justify-content: flex-start; min-height: auto; padding-top: 0; }
+    .construction-scene { width: min(560px, 100%); height: 320px; }
+  }
+
+  @media (max-width: 640px) {
+    .construction-scene { width: 100%; height: 240px; }
+    .scene-truck { width: 130px; left: 0; bottom: 22px; }
+    .scene-rubble { left: 110px; width: 84px; bottom: -2px; }
+    .scene-excavator { width: 184px; right: 0; bottom: 18px; }
+    .scene-spill { left: 122px; bottom: 6px; width: 48px; height: 42px; }
+  }
+</style>

@@ -1,0 +1,48 @@
+<header class="site-header">
+  <nav class="header-inner" aria-label="Navegação principal">
+    <a class="brand" href="/" aria-label="JCPLAN — Página inicial">JCPLAN<span class="brand-dot" aria-hidden="true">.</span></a>
+
+    <div class="header-actions">
+      <div class="header-links">
+      <a href="#trabalho">trabalho</a>
+      <a href="#contato">contato</a>
+      </div>
+
+    <div class="theme-switch" role="group" aria-label="Aparência do site">
+      <button class="theme-button" data-set-theme="dark" aria-label="Ativar modo escuro" aria-pressed="false" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.2 15.5A8.4 8.4 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z" />
+          <path d="M17.8 3.8v3.6M16 5.6h3.6" />
+        </svg>
+      </button>
+      <button class="theme-button" data-set-theme="light" aria-label="Ativar modo claro" aria-pressed="true" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+      </button>
+    </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  function syncThemeButtons() {
+    const current = document.documentElement.dataset.theme;
+    document.querySelectorAll<HTMLButtonElement>('[data-set-theme]').forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.setTheme === current));
+    });
+  }
+
+  syncThemeButtons();
+  document.querySelectorAll<HTMLButtonElement>('[data-set-theme]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const nextTheme = button.dataset.setTheme;
+      if (nextTheme !== 'dark' && nextTheme !== 'light') return;
+      document.documentElement.dataset.theme = nextTheme;
+      try { localStorage.setItem('site-theme', nextTheme); } catch (_) {}
+      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', nextTheme === 'dark' ? '#181817' : '#f2efe8');
+      syncThemeButtons();
+    });
+  });
+</script>

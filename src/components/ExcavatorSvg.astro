@@ -1,0 +1,177 @@
+---
+const { className = '' } = Astro.props;
+---
+
+<div class={`excavator-asset ${className}`.trim()} aria-hidden="true">
+  <svg viewBox="0 0 720 420" class="excavator-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Escavadeira JCPLAN">
+    <defs>
+      <linearGradient id="cabGlassFill" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#9bdced"/>
+        <stop offset="100%" stop-color="#73bdd1"/>
+      </linearGradient>
+      <linearGradient id="metalRod" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#f4f4f6"/>
+        <stop offset="100%" stop-color="#b8bcc4"/>
+      </linearGradient>
+    </defs>
+
+    <!-- TRACKS -->
+    <g id="tracks" class="exc-part tracks">
+      <rect x="318" y="302" width="278" height="56" rx="28" fill="#0a0a0c" stroke="#0b0b0d" stroke-width="8"/>
+      <path d="M350 314h214c23 0 42 19 42 42v0H308v0c0-23 19-42 42-42Z" fill="#121214" opacity="0.18"/>
+      <rect x="354" y="318" width="190" height="32" rx="16" fill="#4b4b50"/>
+      <circle cx="356" cy="330" r="42" fill="#1f1f23" stroke="#050506" stroke-width="8"/>
+      <circle cx="356" cy="330" r="31" fill="#717179" stroke="#1f1f23" stroke-width="5"/>
+      <circle cx="567" cy="330" r="48" fill="#111214" stroke="#050506" stroke-width="8"/>
+      <circle cx="567" cy="330" r="34" fill="#6d6e77" stroke="#1f1f23" stroke-width="6"/>
+      <circle cx="567" cy="330" r="18" fill="#09090a"/>
+      <g fill="#2a2b2f">
+        <circle cx="414" cy="332" r="10"/>
+        <circle cx="470" cy="332" r="10"/>
+        <circle cx="526" cy="332" r="10"/>
+      </g>
+      <path d="M600 330a33 33 0 0 0-66 0 33 33 0 0 0 66 0Z" fill="none" stroke="#17181b" stroke-width="6"/>
+      <g fill="#1c1d20">
+        <circle cx="567" cy="284" r="4"/>
+        <circle cx="589" cy="292" r="4"/>
+        <circle cx="603" cy="312" r="4"/>
+        <circle cx="603" cy="336" r="4"/>
+        <circle cx="589" cy="355" r="4"/>
+        <circle cx="567" cy="363" r="4"/>
+        <circle cx="545" cy="355" r="4"/>
+        <circle cx="531" cy="336" r="4"/>
+        <circle cx="531" cy="312" r="4"/>
+        <circle cx="545" cy="292" r="4"/>
+      </g>
+      <path d="M360 296h186l28 20H332l28-20Z" fill="#57585e" stroke="#1c1d20" stroke-width="6" stroke-linejoin="round"/>
+      <circle cx="418" cy="296" r="11" fill="#676972" stroke="#1d1d20" stroke-width="5"/>
+      <circle cx="501" cy="296" r="11" fill="#676972" stroke="#1d1d20" stroke-width="5"/>
+    </g>
+
+    <!-- BODY -->
+    <g id="body" class="exc-part body">
+      <path d="M312 215h293c13 0 24 10 24 24v66c0 13-11 24-24 24H340c-15 0-28-13-28-28v-58c0-15 13-28 28-28Z" fill="#ffd21a" stroke="#09090a" stroke-width="8" stroke-linejoin="round"/>
+      <rect x="507" y="216" width="122" height="113" rx="0" fill="#ffd21a"/>
+      <path d="M312 215h200v86H312z" fill="#050506"/>
+      <rect x="507" y="232" width="98" height="62" fill="#ffd21a"/>
+      <path d="M534 245h50" stroke="#0b0b0c" stroke-width="8" stroke-linecap="round"/>
+      <path d="M534 270h60" stroke="#0b0b0c" stroke-width="8" stroke-linecap="round"/>
+      <path d="M534 294h54" stroke="#0b0b0c" stroke-width="8" stroke-linecap="round"/>
+      <path d="M414 216v112" stroke="#ffd21a" stroke-width="9"/>
+      <path d="M450 264l-21 22h30l24-22h-33Z" fill="#ff1d24"/>
+      <path d="M318 329h312" stroke="#09090a" stroke-width="6"/>
+      <path d="M592 197h18c5 0 9 4 9 9v15h-36v-15c0-5 4-9 9-9Z" fill="#0a0a0c"/>
+      <path d="M592 197v25" stroke="#0a0a0c" stroke-width="8" stroke-linecap="round"/>
+    </g>
+
+    <!-- CAB -->
+    <g id="cab" class="exc-part cab">
+      <path d="M314 211v92c0 14 10 26 24 26h114V191H345c-13 0-25 6-33 16l-12 16c-7 10-6 23 1 33Z" fill="#050506" stroke="#09090a" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M331 206h97v105h-97z" fill="url(#cabGlassFill)"/>
+      <path d="M434 206h20v105h-20z" fill="#9adced"/>
+      <path d="M427 206v105" stroke="#09090a" stroke-width="6"/>
+      <path d="M356 206l-23 34v71" stroke="#09090a" stroke-width="5"/>
+      <path d="M364 252l-14 53" stroke="#2e7a90" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+      <path d="M386 259l-9 45" stroke="#2e7a90" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+      <path d="M414 300c-26-2-51 4-63 18h81v-64c-9 5-15 23-18 46Z" fill="#14343d" opacity="0.22"/>
+      <ellipse cx="364" cy="272" rx="10" ry="12" fill="#2e7a90" opacity="0.9"/>
+      <ellipse cx="387" cy="280" rx="10" ry="12" fill="#2e7a90" opacity="0.9"/>
+    </g>
+
+    <!-- MAIN BOOM -->
+    <g id="main-boom" class="exc-part main-boom">
+      <path d="M96 105h222c51 0 96 12 129 35 45 31 71 83 76 153l-37 3c-5-60-27-105-64-131-28-19-67-29-113-29H96c-22 0-23-31 0-31Z" fill="#ffd21a" stroke="#09090a" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M101 109h184c70 0 134 24 178 68l-190-17H101z" fill="#e9b600" opacity="0.32"/>
+      <path d="M225 132h125l-15 50H192l33-50Z" fill="#080808"/>
+      <path d="M330 178l17-18v30l-24 12h-18l25-24Z" fill="#ff1d24"/>
+    </g>
+
+    <!-- UPPER BOOM CYLINDER -->
+    <g id="upper-cylinder" class="exc-part hydraulic upper-cylinder">
+      <path d="M132 82 332 165" stroke="url(#metalRod)" stroke-width="12" stroke-linecap="round"/>
+      <path d="M150 72 351 153" stroke="#09090a" stroke-width="26" stroke-linecap="round"/>
+    </g>
+
+    <!-- BODY HYDRAULIC CYLINDER -->
+    <g id="body-cylinder" class="exc-part hydraulic body-cylinder">
+      <path d="M468 139 403 281" stroke="url(#metalRod)" stroke-width="16" stroke-linecap="round"/>
+      <path d="M488 146 422 287" stroke="#0a0a0c" stroke-width="33" stroke-linecap="round"/>
+    </g>
+
+    <!-- VERTICAL STICK / ARM -->
+    <g id="stick" class="exc-part stick">
+      <path d="M88 48c22 0 40 18 40 40v132l-8 61c-3 18-19 31-37 31-19 0-34-15-34-34V79c0-17 10-31 24-31h15Z" fill="#ffd21a" stroke="#09090a" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M92 57 108 250" stroke="#fff5b8" stroke-width="4" opacity="0.55"/>
+      <circle cx="88" cy="48" r="15" fill="#70727c" stroke="#1b1c20" stroke-width="7"/>
+      <circle cx="120" cy="158" r="15" fill="#70727c" stroke="#1b1c20" stroke-width="7"/>
+      <circle cx="118" cy="286" r="15" fill="#70727c" stroke="#1b1c20" stroke-width="7"/>
+    </g>
+
+    <!-- STICK CYLINDER -->
+    <g id="stick-cylinder" class="exc-part hydraulic stick-cylinder">
+      <path d="M76 134 116 274" stroke="url(#metalRod)" stroke-width="11" stroke-linecap="round"/>
+      <path d="M58 137 98 278" stroke="#09090a" stroke-width="26" stroke-linecap="round"/>
+    </g>
+
+    <!-- LINKAGE -->
+    <g id="linkage" class="exc-part linkage">
+      <rect x="77" y="264" width="95" height="28" rx="14" fill="#ffd21a" stroke="#09090a" stroke-width="8"/>
+      <circle cx="85" cy="278" r="13" fill="#70727c" stroke="#1b1c20" stroke-width="7"/>
+      <circle cx="164" cy="278" r="13" fill="#70727c" stroke="#1b1c20" stroke-width="7"/>
+    </g>
+
+    <!-- BUCKET -->
+    <g id="bucket" class="exc-part bucket">
+      <path d="M70 246c32 0 61 10 82 29 12 11 18 24 18 37v26c0 38-31 69-69 69H60c-8 0-13-6-13-13v-64c0-23 8-45 23-62 0-7-1-14 0-22Z" fill="#050506" stroke="#09090a" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M150 385H78c12 0 23-3 33-9l39-20v29Z" fill="#73757e"/>
+      <circle cx="84" cy="278" r="7" fill="#2a2b2f"/>
+      <circle cx="164" cy="278" r="7" fill="#2a2b2f"/>
+    </g>
+
+    <!-- PIVOTS -->
+    <g id="pivots" class="exc-part pivots">
+      <circle cx="153" cy="85" r="15" fill="#70727c" stroke="#1b1c20" stroke-width="7"/>
+      <circle cx="452" cy="196" r="15" fill="#70727c" stroke="#1b1c20" stroke-width="7"/>
+    </g>
+  </svg>
+</div>
+
+<style>
+  .excavator-asset {
+    width: min(480px, 100%);
+  }
+
+  .excavator-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+  }
+
+  .exc-part {
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  #main-boom,
+  #upper-cylinder,
+  #pivots {
+    transform-origin: 452px 196px;
+  }
+
+  #stick,
+  #stick-cylinder,
+  #linkage,
+  #bucket {
+    transform-origin: 153px 85px;
+  }
+
+  #bucket,
+  #linkage {
+    transform-origin: 118px 286px;
+  }
+
+  #body-cylinder {
+    transform-origin: 452px 196px;
+  }
+</style>
