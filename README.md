@@ -1,11 +1,9 @@
-Atualização do Hero da JCPLAN.
+JCPLAN — silhueta de operador mais sutil.
 
-A poeira foi movida mais 30px para a direita.
-
-Arquivos incluídos:
-- src/components/Hero.astro
+Atualiza apenas public/images/escavadeira-jcplan.svg.
+A figura foi redesenhada como um operador sentado de perfil e agora fica atrás da camada de vidro fumê, com contraste reduzido.
 
 Instalação:
 cd ~/development/terraplanagem-jcplan-site
-unzip -o ~/Downloads/jcplan-hero-poeira-mais-direita-v4.zip -d .
+unzip -o ~/Downloads/jcplan-escavadeira-silhueta-sutil.zip -d .
 npm run dev
