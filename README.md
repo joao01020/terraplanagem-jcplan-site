@@ -1,9 +1,15 @@
-JCPLAN — silhueta de operador mais sutil.
+# JCPLAN — Escavadeira alinhada ao caminhão
 
-Atualiza apenas public/images/escavadeira-jcplan.svg.
-A figura foi redesenhada como um operador sentado de perfil e agora fica atrás da camada de vidro fumê, com contraste reduzido.
+Ajuste feito: `src/components/Hero.astro`
 
-Instalação:
+## O que foi corrigido
+- A escavadeira agora anda na mesma reta visual do caminhão.
+- O deslocamento continua horizontal, sem desalinhar da base do caminhão.
+- Removidos estilos antigos de `data-position` que podiam conflitar com o movimento contínuo.
+
+## Instalação
+```bash
 cd ~/development/terraplanagem-jcplan-site
-unzip -o ~/Downloads/jcplan-escavadeira-silhueta-sutil.zip -d .
+unzip -o ~/Downloads/jcplan-escavadeira-alinhada-caminhao.zip -d .
 npm run dev
+```
